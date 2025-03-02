@@ -15,7 +15,7 @@ function App() {
             setConverted(data.rates[toCurrency]);
             setIsLoading(false);
         }
-
+        if (fromCurrency === toCurrency) return setConverted(amount);
         convert();
     }, [amount, fromCurrency, toCurrency])
 
